@@ -1,0 +1,54 @@
+h1 {
+  font-size: 1rem;
+}
+
+.Logo {
+  height: 100px;
+}
+
+.Header {
+  grid-template-columns: 70vw 30vw;
+  display: grid;
+}
+
+.Header-Links {
+  grid-template-columns: repeat(4, auto);
+  align-content: center;
+  list-style-type: none;
+  display: grid;
+}
+
+.search-container {
+  height: 20px;
+}
+
+.search-box, .search-btn {
+  height: 100%;
+  margin: auto 5px;
+}
+
+.restaurant {
+  border: 2px solid red;
+  margin: 10px;
+}
+
+.restaurant h1 {
+  text-align: center;
+}
+
+.restaurant-image {
+  width: 175px;
+  height: 150px;
+  margin: auto;
+  display: block;
+}
+
+.restaurant-container {
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: repeat(auto-fit, 250px);
+  grid-auto-rows: 0;
+  display: grid;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=index.9e4c6fd2.css.map */
