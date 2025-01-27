@@ -25,7 +25,7 @@ const Body = () => {
   getData = async () => {
     try {
       const data = await fetch(api_url);
-      // console.log(data);
+      console.log(data);
       const json = await data.json();
       console.log(json);
       console.log(
@@ -47,7 +47,7 @@ const Body = () => {
 
   return (
     <>
-      <div className="search-container">
+      {/* <div className="">
         <input
           type="text"
           placeholder="search"
@@ -61,9 +61,9 @@ const Body = () => {
           }}
           className="search-btn"
         ></button>
-      </div>
+      </div> */}
 
-      <div className="restaurant-container">
+      <div className="">
         {allRestaurants.length === 0 ? (
           <>
             <Shimmer></Shimmer>
@@ -72,14 +72,20 @@ const Body = () => {
           filteredRestaurants.map((restaurant) => {
             return (
               <Link to={'/restaurant/' + restaurant?.info?.id}>
-                <div className="restaurant" key={restaurant?.info?.id}>
-                  <h1>{restaurant?.info?.name}</h1>
-                  <img
-                    src={IMG_CDN_URL + restaurant?.info?.cloudinaryImageId}
-                    alt={restaurant?.info?.name}
-                    className="restaurant-image"
-                  />
-                  <h1>{restaurant?.info?.avgRating} stars</h1>
+                <div
+                  className="bg-green-100 flex items-center"
+                  key={restaurant?.info?.id}
+                >
+                  <div className="bg-red-500">Tailwind CSS is working!</div>
+                  <div className="hidden">
+                    <h1>{restaurant?.info?.name}</h1>
+                    {/* <img
+                      src={IMG_CDN_URL + restaurant?.info?.cloudinaryImageId}
+                      alt={restaurant?.info?.name}
+                      class=""
+                    /> */}
+                    <h1>{restaurant?.info?.avgRating} stars</h1>
+                  </div>
                 </div>
               </Link>
             );

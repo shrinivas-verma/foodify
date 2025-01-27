@@ -28,7 +28,8 @@ h1 {
 }
 
 .restaurant {
-  border: 2px solid red;
+  background-color: EDE8F3D52AO;
+  border: 2px dotted red;
   margin: 10px;
 }
 
