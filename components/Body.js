@@ -47,7 +47,7 @@ const Body = () => {
 
   return (
     <>
-      {/* <div className="">
+      <div className="">
         <input
           type="text"
           placeholder="search"
@@ -61,7 +61,7 @@ const Body = () => {
           }}
           className="search-btn"
         ></button>
-      </div> */}
+      </div>
 
       <div className="">
         {allRestaurants.length === 0 ? (
@@ -79,11 +79,11 @@ const Body = () => {
                   <div className="bg-red-500">Tailwind CSS is working!</div>
                   <div className="hidden">
                     <h1>{restaurant?.info?.name}</h1>
-                    {/* <img
+                    <img
                       src={IMG_CDN_URL + restaurant?.info?.cloudinaryImageId}
                       alt={restaurant?.info?.name}
                       class=""
-                    /> */}
+                    />
                     <h1>{restaurant?.info?.avgRating} stars</h1>
                   </div>
                 </div>
