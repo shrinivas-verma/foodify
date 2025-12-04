@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
+
 import Header from './components/Header';
 import Body from './components/Body';
 import Footer from './components/Footer';
@@ -9,7 +10,8 @@ import About from './components/About';
 import Cart from './components/Cart';
 import Contact from './components/Contact';
 import RestaurantMenu from './components/RestaurantMenu';
-import './src/styles/output.css';
+
+import './src/styles/tailwind.css';
 
 function AppLayout() {
   return (
