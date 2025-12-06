@@ -9,7 +9,7 @@ import About from './components/About';
 import Cart from './components/Cart';
 import Contact from './components/Contact';
 import RestaurantMenu from './components/RestaurantMenu';
-import './src/styles/output.css';
+import './styles/tailwind.css';
 
 function AppLayout() {
   return (
