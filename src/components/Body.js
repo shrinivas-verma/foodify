@@ -22,7 +22,7 @@ const Body = () => {
     getData();
   }, []);
 
-  getData = async () => {
+  async function getData() {
     try {
       const data = await fetch(api_url);
       console.log(data);
@@ -43,7 +43,7 @@ const Body = () => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   return (
     <>
