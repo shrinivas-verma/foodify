@@ -63,33 +63,38 @@ const Body = () => {
         ></button>
       </div>
 
-      <div className="">
+      <div>
         {allRestaurants.length === 0 ? (
           <>
             <Shimmer></Shimmer>
           </>
         ) : (
-          filteredRestaurants.map((restaurant) => {
-            return (
-              <Link to={'/restaurant/' + restaurant?.info?.id}>
-                <div
-                  className="bg-green-100 flex items-center"
+          <div className="flex-row flex-nowrap align-center justify-center overflow-x-hidden">
+            {filteredRestaurants.map((restaurant) => {
+              return (
+                <Link
+                  to={'/restaurant/' + restaurant?.info?.id}
                   key={restaurant?.info?.id}
+                  className="inline-block w-60 h-80 flex"
                 >
-                  <div className="bg-red-500">Tailwind CSS is working!</div>
-                  <div className="hidden">
-                    <h1>{restaurant?.info?.name}</h1>
+                  <div className="bg-sky-50 m-2 hover:bg-green-200">
+                  <div className="">
+                      <h1>{restaurant?.info?.name}</h1>
                     <img
                       src={IMG_CDN_URL + restaurant?.info?.cloudinaryImageId}
                       alt={restaurant?.info?.name}
-                      class=""
+                      className="h-48 object-contain"
                     />
-                    <h1>{restaurant?.info?.avgRating} stars</h1>
+                    <h1>
+                      {restaurant?.info?.avgRating} stars
+                    </h1>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            );
-          })
+                </Link>
+              );
+              l̥;
+            })}
+          </div>
         )}
       </div>
     </>
