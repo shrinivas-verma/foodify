@@ -69,25 +69,23 @@ const Body = () => {
             <Shimmer></Shimmer>
           </>
         ) : (
-          <div className="flex-row flex-nowrap align-center justify-center overflow-x-hidden">
+          <div className="flex flex-row flex-nowrap items-center justify-start overflow-x-auto snap-x snap-mandatory">
             {filteredRestaurants.map((restaurant) => {
               return (
                 <Link
                   to={'/restaurant/' + restaurant?.info?.id}
                   key={restaurant?.info?.id}
-                  className="inline-block w-60 h-80 flex"
+                  className="flex-none w-60 h-80 m-2 bg-sky-50 hover:bg-green-200 flex flex-col items-center justify-start snap-start scroll-m-2"
                 >
                   <div className="bg-sky-50 m-2 hover:bg-green-200">
-                  <div className="">
-                      <h1>{restaurant?.info?.name}</h1>
-                    <img
-                      src={IMG_CDN_URL + restaurant?.info?.cloudinaryImageId}
-                      alt={restaurant?.info?.name}
-                      className="h-48 object-contain"
-                    />
-                    <h1>
-                      {restaurant?.info?.avgRating} stars
-                    </h1>
+                    <div className="">
+                      <img
+                        src={IMG_CDN_URL + restaurant?.info?.cloudinaryImageId}
+                        alt={restaurant?.info?.name}
+                        className="h-48 object-contain"
+                      />
+                      <h1 className="text-lg">{restaurant?.info?.name}</h1>
+                      <h1>{restaurant?.info?.avgRating} stars</h1>
                     </div>
                   </div>
                 </Link>
